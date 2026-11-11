@@ -1,0 +1,25 @@
+{
+  "owner": "0x320f5812f271d10fb9796e4a8c6b103f1222bb9a",
+  "network": "Stable Studionet",
+  "chainId": 61999,
+  "rpc": "https://studio.genlayer.com/api",
+  "records": [
+    {
+      "hash": "0x5d24b63bc7c6e8ca92791fb03a0b9f8cd9fb248f19983bb6cb3d94a667bde7a1",
+      "functionName": "open_session",
+      "args": [
+        "textile-saturday",
+        "{\"title\":\"Saturday textile repair table\",\"parts\":[{\"name\":\"blue cotton button\",\"stock\":2},{\"name\":\"zipper pull\",\"stock\":1}],\"jobs\":[{\"name\":\"Coat / 01\",\"note\":\"Use two blue cotton buttons on the coat. No zipper pull is needed. These are all materials needed from the catalogue.\"},{\"name\":\"Shirt / 02\",\"note\":\"Sew one blue cotton button onto the shirt. No zipper pull is needed. These are all materials needed from the catalogue.\"},{\"name\":\"Cardigan / 03\",\"note\":\"Attach one blue cotton button to the cardigan. No zipper pull is needed. These are all materials needed from the catalogue.\"},{\"name\":\"Bag / 04\",\"note\":\"Replace the bag tab with one zipper pull. No blue cotton buttons are needed. These are all materials needed from the catalogue.\"}]}"
+      ]
+    },
+    {
+      "hash": "0x161f94d88afdea8d14d7ba7b00e77f07b1e4ebae53b17943f459f33d7c803236",
+      "functionName": "plan",
+      "args": [
+        "textile-saturday"
+      ]
+    }
+  ],
+  "deployHash": "0xaabf7d228061127cc2213f1af80be9a1e20c022249a29a8257dd078524efb63f",
+  "address": "0xAb36AF43c0e364632C1f2bcDe931d18D5f8FF9f2"
+}
