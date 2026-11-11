@@ -18,6 +18,41 @@
       "args": [
         "textile-saturday"
       ]
+    },
+    {
+      "hash": "0xd2e90c1d57cba3e97f1fc18b0361fe169ecade5cf976b1a5d20167b850f2ad68",
+      "functionName": "reserve",
+      "args": [
+        "textile-saturday",
+        "930d62e3a543c7df7f2e302c442ba1c123f4accb1046d9840787bab117cb2eab"
+      ]
+    },
+    {
+      "hash": "0x427b5ee2d0bbfeb7d48cb46537bfd8244a3fadee687e256c0a87a29e3a67a15b",
+      "functionName": "finish_job",
+      "args": [
+        "textile-saturday",
+        1,
+        true
+      ]
+    },
+    {
+      "hash": "0x6faf8a96201409ad6e79fef1e6b58563e42f651189ae16ab4b6b4f37b75e7868",
+      "functionName": "finish_job",
+      "args": [
+        "textile-saturday",
+        2,
+        false
+      ]
+    },
+    {
+      "hash": "0xe7ccbdf15926d9fe9d77e36985a8785a9d5885bb9aae6c948e7a8dfb20b7f76e",
+      "functionName": "finish_job",
+      "args": [
+        "textile-saturday",
+        3,
+        true
+      ]
     }
   ],
   "deployHash": "0xaabf7d228061127cc2213f1af80be9a1e20c022249a29a8257dd078524efb63f",

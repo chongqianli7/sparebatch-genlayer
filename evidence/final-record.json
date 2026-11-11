@@ -1,0 +1,120 @@
+{
+  "available": [
+    1,
+    0
+  ],
+  "cells": [
+    {
+      "quantity": 2,
+      "quote": "Use two blue cotton buttons on the coat."
+    },
+    {
+      "quantity": 0,
+      "quote": "No zipper pull is needed."
+    },
+    {
+      "quantity": 1,
+      "quote": "Sew one blue cotton button onto the shirt."
+    },
+    {
+      "quantity": 0,
+      "quote": "No zipper pull is needed."
+    },
+    {
+      "quantity": 1,
+      "quote": "Attach one blue cotton button to the cardigan."
+    },
+    {
+      "quantity": 0,
+      "quote": "No zipper pull is needed."
+    },
+    {
+      "quantity": 0,
+      "quote": "No blue cotton buttons are needed."
+    },
+    {
+      "quantity": 1,
+      "quote": "Replace the bag tab with one zipper pull."
+    }
+  ],
+  "commitment": "9d989825b773a42f425b8e05d37edfd1edd6a90424e94f8cbb13cc9893174e01",
+  "consumed": [
+    1,
+    1
+  ],
+  "name": "textile-saturday",
+  "outcomes": [
+    "WAITING",
+    "COMPLETED",
+    "CANCELLED",
+    "COMPLETED"
+  ],
+  "owner": "0x320f5812f271d10fb9796e4a8c6b103f1222bb9a",
+  "payload": {
+    "jobs": [
+      {
+        "name": "Coat / 01",
+        "note": "Use two blue cotton buttons on the coat. No zipper pull is needed. These are all materials needed from the catalogue."
+      },
+      {
+        "name": "Shirt / 02",
+        "note": "Sew one blue cotton button onto the shirt. No zipper pull is needed. These are all materials needed from the catalogue."
+      },
+      {
+        "name": "Cardigan / 03",
+        "note": "Attach one blue cotton button to the cardigan. No zipper pull is needed. These are all materials needed from the catalogue."
+      },
+      {
+        "name": "Bag / 04",
+        "note": "Replace the bag tab with one zipper pull. No blue cotton buttons are needed. These are all materials needed from the catalogue."
+      }
+    ],
+    "parts": [
+      {
+        "name": "blue cotton button",
+        "stock": 2
+      },
+      {
+        "name": "zipper pull",
+        "stock": 1
+      }
+    ],
+    "title": "Saturday textile repair table"
+  },
+  "plan": {
+    "needs": [
+      [
+        2,
+        0
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        0,
+        1
+      ]
+    ],
+    "remaining": [
+      0,
+      0
+    ],
+    "review": [],
+    "selected": [
+      1,
+      2,
+      3
+    ],
+    "used": [
+      2,
+      1
+    ]
+  },
+  "plan_digest": "930d62e3a543c7df7f2e302c442ba1c123f4accb1046d9840787bab117cb2eab",
+  "state": "CLOSED"
+}

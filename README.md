@@ -1,6 +1,6 @@
 # SpareBatch
 
-[Open the repair desk](https://chongqianli7.github.io/sparebatch-genlayer/) · [Contract source](contracts/sparebatch.py) · [Protocol](PROTOCOL.md)
+[Open the repair desk](https://chongqianli7.github.io/sparebatch-genlayer/) · [Deployed contract](https://explorer-studio.genlayer.com/address/0xAb36AF43c0e364632C1f2bcDe931d18D5f8FF9f2) · [Contract source](contracts/sparebatch.py) · [Protocol](PROTOCOL.md)
 
 **Make more mends.** A parts-planning desk for small community repair sessions. The organizer records the available stock and each item's declared material requirements. GenLayer independently interprets every job × part; exact subset enumeration finds the largest feasible batch. The organizer reserves that plan, then completes or cancels individual jobs without double-counting parts.
 
@@ -31,6 +31,6 @@ Inventory and notes are organizer declarations, not independently authenticated 
 
 ## Development
 
-Node.js 22+ and Python 3.12+. `npm ci`, `npm test`, `python3 tests/contract_test.py`, `npm run build`. Serve `dist/` as a static site. The tracked `docs/` directory contains the GitHub Pages build; rebuild it after source changes. No paid API key, server, backend or server-held user wallet is required.
+Node.js 22+ and Python 3.12+. `npm ci`, `npm test`, `python3 tests/contract_test.py`, `npm run build`. Serve `dist/` as a static site. The tracked `docs/` directory contains the GitHub Pages build; copy a fresh `dist/` there after source changes. No paid API key, server, backend or server-held user wallet is required.
 
 See [deployment.json](deployment.json) and [EVIDENCE.md](EVIDENCE.md) for the deployed address and observed network results. Local contract tests use a mocked host; they do not execute GenVM or real model consensus.

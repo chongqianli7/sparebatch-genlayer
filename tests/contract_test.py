@@ -24,4 +24,23 @@ class Checks(unittest.TestCase):
   c=m.SpareBatch();c.records={};c.open_session('abc',m.encode(p));fake.gl.message.sender_address='0xbbb'
   with self.assertRaises(KeyError):c.reserve('abc','x')
   fake.gl.message.sender_address='0xaaa'
+class Return:
+ def __init__(self,x):self.calldata=x
+class ConsensusChecks(unittest.TestCase):
+ def setUp(self):
+  self.c=m.SpareBatch();self.c.records={};fake.gl.message.sender_address='0xaaa';self.c.open_session('abc',m.encode(p))
+  fake.gl.vm=types.SimpleNamespace(Return=Return)
+ def test_validator_checks_entire_vector(self):
+  seq=[cells([2,0,1,0,1,0,0,1]),cells([1,0,1,0,1,0,0,1])]
+  fake.gl.nondet=types.SimpleNamespace(exec_prompt=lambda *a,**k:{'cells':seq.pop(0)})
+  def run(leader,validator):
+   value=leader();self.assertFalse(validator(Return(value)));raise ValueError('disagree')
+  fake.gl.vm.run_nondet_unsafe=run
+  with self.assertRaises(ValueError):self.c.plan('abc')
+  self.assertEqual(json.loads(self.c.records['0xaaa:abc'])['state'],'OPEN')
+ def test_model_failure_leaves_no_plan(self):
+  def fail(*a,**k):raise ValueError('unavailable')
+  fake.gl.nondet=types.SimpleNamespace(exec_prompt=fail);fake.gl.vm.run_nondet_unsafe=lambda l,v:l()
+  with self.assertRaises(ValueError):self.c.plan('abc')
+  self.assertNotIn('plan',json.loads(self.c.records['0xaaa:abc']))
 if __name__=='__main__':unittest.main()

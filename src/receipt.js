@@ -1,0 +1,2 @@
+import {abi} from 'genlayer-js';
+export function decodedCall(tx){if(tx.txDataDecoded)return tx.txDataDecoded;const data=tx?.data?.calldata;if(!data)return null;const bytes=data.raw?new Uint8Array(data.raw):Uint8Array.from(atob(data.base64),c=>c.charCodeAt(0));const value=abi.calldata.decode(bytes);const obj=value instanceof Map?Object.fromEntries(value):value;return{functionName:obj.method,args:(obj.args??[]).map(x=>typeof x==='bigint'&&x>=BigInt(Number.MIN_SAFE_INTEGER)&&x<=BigInt(Number.MAX_SAFE_INTEGER)?Number(x):x)}}
